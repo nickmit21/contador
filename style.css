@@ -19,11 +19,11 @@ body {
     position: relative;
     z-index: 10;
     width: 90vw;
-    max-width: 800px; /* Mantém o container legível em telas grandes */
+    max-width: 800px;
 }
 
-h1 {
-    /* MELHORIA: Fonte fluida com tamanho mínimo e máximo */
+/* Novo estilo para o título com os nomes */
+.names {
     font-size: clamp(2.5rem, 6vw, 4rem);
     color: #d1498b;
     margin-bottom: 2vh;
@@ -31,7 +31,7 @@ h1 {
 }
 
 .heart-pulse {
-    font-size: clamp(60px, 10vw, 80px); /* Coração também pode ser fluido */
+    font-size: clamp(60px, 10vw, 80px);
     color: #ff69b4;
     margin: 30px 0;
     animation: pulse 1.5s infinite ease-in-out;
@@ -43,31 +43,42 @@ h1 {
     100% { transform: scale(1); opacity: 1; }
 }
 
-#counter {
-    /* MELHORIA: Fonte fluida para o contador */
-    font-size: clamp(1rem, 4vw, 2.2rem);
-    font-weight: bold;
-    color: #8a2be2;
-    border: 2px solid #ff69b4;
-    padding: 3vw 4vw;
+/* Estilo para a caixa do contador */
+#counter-box {
+    border: 2px solid #e05a9c;
+    padding: 20px;
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.5px;
     margin-bottom: 20px;
 }
 
+/* Estilo para o texto do contador */
+#counter {
+    font-size: clamp(1rem, 4vw, 2.2rem);
+    font-weight: bold;
+    color: #8a2be2;
+    letter-spacing: 0.5px;
+}
+
+/* Estilo para a caixa da frase */
+#phrase-box {
+    border: 2px solid #e05a9c;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Estilo para o texto da frase */
 #phrase-display {
-    /* MELHORIA: Fonte fluida para a frase */
     font-size: clamp(1rem, 2.5vw, 1.2rem);
     font-style: italic;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(255, 105, 180, 0.1);
-    border-radius: 10px;
     color: #8a2be2;
 }
 
+/* Estilo para o botão */
 #change-phrase-btn {
     margin-top: 20px;
     padding: 12px 25px;
@@ -87,7 +98,7 @@ h1 {
     background-color: #e05a9c;
 }
 
-/* Animação dos corações de fundo (já está responsiva com 'vw') */
+/* Animação dos corações de fundo (permanece a mesma) */
 .background-hearts {
     position: absolute;
     width: 100vw;
