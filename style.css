@@ -2,7 +2,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Altura mínima da tela */
+    min-height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f7e6f6;
@@ -13,74 +13,53 @@ body {
 .container {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 5vh 5vw; /* Padding responsivo com base na altura e largura da tela */
+    padding: 5vh 5vw;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 10;
-    width: 90vw; /* Ocupa 90% da largura da tela */
-    max-width: 800px; /* Garante que não fique muito grande em telas de desktop */
+    width: 90vw;
+    max-width: 800px;
 }
 
 h1 {
     color: #d1498b;
-    margin-bottom: 2vh; /* Margem responsiva */
-    font-size: 6vw; /* Tamanho da fonte responsivo */
+    margin-bottom: 2vh;
+    font-size: 6vw;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Tamanho da fonte ajustado para desktop */
 @media (min-width: 768px) {
     h1 {
-        font-size: 4em; /* Tamanho fixo para telas maiores */
+        font-size: 4em;
     }
 }
 
-/* Estilo para as fotos */
-.photo-gallery {
-    display: flex;
-    flex-direction: column; /* Começa como coluna para telas menores */
-    justify-content: center;
-    gap: 3vh; /* Espaçamento entre as fotos */
-    margin-bottom: 3vh;
+/* NOVO ESTILO: Coração pulsante */
+.heart-pulse {
+    font-size: 80px;
+    color: #ff69b4;
+    margin: 30px 0;
+    animation: pulse 1.5s infinite ease-in-out;
 }
 
-.photo-frame {
-    width: 40vw; /* Largura da moldura em porcentagem da tela */
-    height: 40vw; /* Altura da moldura igual à largura para ficar quadrada */
-    max-width: 180px; /* Limite máximo para a moldura */
-    max-height: 180px;
-    border: 5px solid #ff69b4;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Centraliza a moldura */
-}
-
-.photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Layout em linha para telas maiores */
-@media (min-width: 768px) {
-    .photo-gallery {
-        flex-direction: row; /* Volta a ser linha em telas maiores */
-        gap: 30px;
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
-    .photo-frame {
-        width: 180px;
-        height: 180px;
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 
-/* Estilo para o contador */
 #counter {
-    font-size: 5vw; /* Tamanho da fonte responsivo */
+    font-size: 5vw;
     font-weight: bold;
     color: #8a2be2;
     border: 2px solid #ff69b4;
@@ -89,17 +68,45 @@ h1 {
     background-color: #fff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
-/* Ajuste de tamanho da fonte para o contador em telas maiores */
 @media (min-width: 768px) {
     #counter {
-        font-size: 2.2em; /* Tamanho fixo para telas maiores */
+        font-size: 2.2em;
     }
 }
 
+#phrase-display {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+    color: #8a2be2;
+}
 
-/* Estilo para os corações de fundo (animação) */
+/* NOVO ESTILO: Botão */
+#change-phrase-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #d1498b;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+#change-phrase-btn:hover {
+    transform: scale(1.05);
+    background-color: #e05a9c;
+}
+
 .background-hearts {
     position: absolute;
     width: 100vw;
@@ -111,19 +118,17 @@ h1 {
 .background-hearts i {
     position: absolute;
     color: #ffb6c1;
-    font-size: 3vw; /* Tamanho responsivo */
+    font-size: 3vw;
     opacity: 0;
     animation: floatHeart 10s infinite ease-in;
 }
 
-/* Posições e tamanhos iniciais ajustados para porcentagens */
 .heart-1 { top: 10%; left: 5%; font-size: 4vw; animation-duration: 8s; animation-delay: 0s; }
 .heart-2 { top: 20%; left: 20%; font-size: 5vw; animation-duration: 10s; animation-delay: 2s; }
 .heart-3 { top: 30%; left: 40%; font-size: 3.5vw; animation-duration: 9s; animation-delay: 4s; }
 .heart-4 { top: 40%; left: 60%; font-size: 6vw; animation-duration: 11s; animation-delay: 1s; }
 .heart-5 { top: 50%; left: 80%; font-size: 4.2vw; animation-duration: 7s; animation-delay: 3s; }
 .heart-6 { top: 60%; left: 90%; font-size: 5vw; animation-duration: 12s; animation-delay: 5s; }
-
 
 @keyframes floatHeart {
     0% {
