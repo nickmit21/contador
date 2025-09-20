@@ -1,67 +1,145 @@
-// Obtém o elemento HTML com o ID "counter"
-const counterElement = document.getElementById('counter');
-
-// Define a data de início para o contador
-// Formato: ano, mês (0-11), dia, hora, minuto, segundo
-// O mês 6 representa julho (0=janeiro, 1=fevereiro, ..., 6=julho)
-const startDate = new Date(2024, 6, 12, 0, 0, 0); 
-
-// Função que atualiza o contador
-function updateCounter() {
-    // Obtém a data e hora atuais
-    const now = new Date();
-    
-    // Se a data de início for no futuro, o contador mostra 00:00:00
-    if (now < startDate) {
-        counterElement.textContent = "00 Anos, 00 Meses, 00 Dias | 00:00:00";
-        return;
-    }
-
-    // Calcula a diferença em milissegundos
-    const differenceInMilliseconds = now.getTime() - startDate.getTime();
-
-    // Calcula os segundos, minutos e horas restantes
-    const totalSeconds = Math.floor(differenceInMilliseconds / 1000);
-    const seconds = totalSeconds % 60;
-    const minutes = Math.floor(totalSeconds / 60) % 60;
-    const hours = Math.floor(totalSeconds / 3600) % 24;
-    
-    // Calcula os anos, meses e dias a partir das datas
-    let years = now.getFullYear() - startDate.getFullYear();
-    let months = now.getMonth() - startDate.getMonth();
-    let days = now.getDate() - startDate.getDate();
-    
-    // Ajusta os valores se forem negativos
-    if (days < 0) {
-        months--;
-        // Pega o número de dias do mês anterior
-        const daysInPreviousMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
-        days += daysInPreviousMonth;
-    }
-    if (months < 0) {
-        years--;
-        months += 12;
-    }
-
-    // Função para formatar o número, adicionando um zero à esquerda se for menor que 10
-    function formatTime(time) {
-        return time < 10 ? `0${time}` : time;
-    }
-
-    // Formata o tempo para exibir no formato completo
-    const formattedYears = formatTime(years);
-    const formattedMonths = formatTime(months);
-    const formattedDays = formatTime(days);
-    const formattedHours = formatTime(hours);
-    const formattedMinutes = formatTime(minutes);
-    const formattedSeconds = formatTime(seconds);
-
-    // Atualiza o conteúdo do elemento na tela
-    counterElement.textContent = `${formattedYears} Anos, ${formattedMonths} Meses, ${formattedDays} Dias | ${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7e6f6;
+    overflow: hidden;
+    position: relative;
 }
 
-// Inicia o contador chamando a função `updateCounter` a cada 1000 milissegundos (1 segundo)
-setInterval(updateCounter, 1000);
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+    width: 90vw;
+    max-width: 800px;
+}
 
-// Chama a função uma vez imediatamente para evitar o atraso inicial de 1 segundo
-updateCounter();
+h1 {
+    color: #d1498b;
+    margin-bottom: 2vh;
+    font-size: 6vw;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+}
+
+/* NOVO ESTILO: Coração pulsante */
+.heart-pulse {
+    font-size: 80px;
+    color: #ff69b4;
+    margin: 30px 0;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#counter {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #8a2be2;
+    border: 2px solid #ff69b4;
+    padding: 3vw 4vw;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    #counter {
+        font-size: 2.2em;
+    }
+}
+
+#phrase-display {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+    color: #8a2be2;
+}
+
+/* NOVO ESTILO: Botão */
+#change-phrase-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #d1498b;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+#change-phrase-btn:hover {
+    transform: scale(1.05);
+    background-color: #e05a9c;
+}
+
+.background-hearts {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.background-hearts i {
+    position: absolute;
+    color: #ffb6c1;
+    font-size: 3vw;
+    opacity: 0;
+    animation: floatHeart 10s infinite ease-in;
+}
+
+.heart-1 { top: 10%; left: 5%; font-size: 4vw; animation-duration: 8s; animation-delay: 0s; }
+.heart-2 { top: 20%; left: 20%; font-size: 5vw; animation-duration: 10s; animation-delay: 2s; }
+.heart-3 { top: 30%; left: 40%; font-size: 3.5vw; animation-duration: 9s; animation-delay: 4s; }
+.heart-4 { top: 40%; left: 60%; font-size: 6vw; animation-duration: 11s; animation-delay: 1s; }
+.heart-5 { top: 50%; left: 80%; font-size: 4.2vw; animation-duration: 7s; animation-delay: 3s; }
+.heart-6 { top: 60%; left: 90%; font-size: 5vw; animation-duration: 12s; animation-delay: 5s; }
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
