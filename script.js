@@ -9,345 +9,684 @@ const startDate = new Date(2024, 6, 12, 0, 0, 0);
 // Lista completa com as 500 frases de amor
 const lovePhrases = [
     "Meu amor por você é como uma chama que nunca se apaga.",
-    "Você é a razão do meu sorriso todos os dias.",
-    "Com você, a vida é uma aventura maravilhosa.",
-    "O seu abraço é o meu lugar favorito no mundo.",
-    "Não importa o tempo ou a distância, meu amor por você só cresce.",
-    "Você é o meu tudo, minha melhor amiga e meu grande amor.",
-    "Cada dia ao seu lado é um presente que a vida me deu.",
-    "Onde quer que eu esteja, meu coração sempre te encontra.",
-    "Você me inspira a ser a melhor versão de mim mesmo.",
-    "Você me faz sentir completo.",
-    "Amo cada detalhe seu, cada risada, cada olhar.",
-    "A vida é mais colorida com você.",
-    "Com você, o amor é uma melodia perfeita.",
-    "Você é o meu tudo, hoje e sempre.",
-    "O seu sorriso é o sol do meu dia.",
-    "Nosso amor é a prova de que sonhos se realizam.",
-    "Sua presença é o maior presente que a vida me deu.",
-    "Sempre que fecho os olhos, vejo o seu sorriso.",
-    "Meu coração bate no seu ritmo.",
-    "Amo-te além do que as palavras podem dizer.",
-    "Nosso amor é eterno como o céu e o mar.",
-    "Nenhuma distância pode diminuir o meu amor por você.",
-    "Você é a estrela mais linda do meu céu.",
-    "Meu coração é seu, para sempre e sempre.",
-    "Você me ensinou o que é o amor de verdade.",
-    "Quero passar o resto da minha vida ao seu lado.",
-    "Estar com você é a minha maior felicidade.",
-    "Você é a minha paz em meio ao caos.",
-    "Meu coração é inteiramente seu.",
-    "Me apaixonei por você mais de uma vez, e em cada uma delas me apaixonei mais e mais.",
-    "Você é a pessoa que eu sonhei a vida toda.",
-    "Meu mundo ficou mais bonito quando você chegou.",
-    "Te amo em cada batida do meu coração.",
-    "Você é o meu porto seguro.",
-    "Meu amor por você é incondicional.",
-    "Sua voz é a minha música preferida.",
-    "A sua mão se encaixa perfeitamente na minha.",
-    "O seu cheiro me acalma.",
-    "Te escolheria de novo e de novo, mil vezes.",
-    "Você é a luz no fim do túnel.",
-    "Meu amor, você é a minha maior sorte.",
-    "A cada dia que passa, eu me apaixono mais por você.",
-    "Você é a parte que faltava em mim.",
-    "Prometo te amar e te proteger para sempre.",
-    "O amor é lindo, mas o nosso é perfeito.",
-    "Você é a minha razão de viver.",
-    "Com você, até os momentos mais simples se tornam especiais.",
-    "Eu te amo mais do que as palavras podem expressar.",
-    "Você é o meu primeiro e último pensamento.",
-    "O meu maior sonho é construir uma vida inteira com você.",
-    "Meu coração é inteiramente seu.",
-    "Você é a minha alma gêmea.",
-    "Te amar é fácil, é a coisa mais natural do mundo.",
-    "Você é a única pessoa que eu quero ao meu lado.",
-    "Prometo te amar para todo o sempre.",
-    "Meu amor, meu coração é seu.",
-    "Você é a minha melhor decisão.",
-    "O seu beijo é a minha maior recompensa.",
-    "Você é a mais bela paisagem que meus olhos já viram.",
-    "Te amo por quem você é e por quem eu sou com você.",
-    "Estar com você é como estar em casa.",
-    "Você é o meu paraíso particular.",
-    "Você me faz querer ser uma pessoa melhor.",
-    "Meu amor, você é a minha vida.",
-    "Você é a única pessoa que eu quero amar.",
-    "Eu te amo, e isso é a única certeza na minha vida.",
-    "Você é o meu 'felizes para sempre'.",
-    "Meus dias são melhores porque você existe.",
-    "O universo conspira a nosso favor.",
-    "Você é o meu presente, meu passado e meu futuro.",
-    "A sua felicidade é a minha prioridade.",
-    "Você é o meu anjo.",
-    "Eu te amo mais do que as palavras podem dizer.",
-    "A sua beleza é um reflexo do seu lindo coração.",
-    "Você é a melodia que o meu coração canta.",
-    "Você me faz sentir o homem mais sortudo do mundo.",
-    "Te amo hoje, amanhã e para todo o sempre.",
-    "Meu amor por você é infinito.",
-    "Sua presença é o meu maior conforto.",
-    "Você é a minha heroína.",
-    "Meu amor, você é a minha melhor parte.",
-    "Com você, eu sou invencível.",
-    "Você é a minha razão para sorrir.",
-    "Eu te amo e não há nada que possa mudar isso.",
-    "O meu coração é o seu lar.",
-    "Você é a mais linda obra de arte.",
-    "Meu amor, você me completa.",
-    "Você é a melhor coisa que me aconteceu.",
-    "O seu abraço me salva.",
-    "Meu amor, você é o meu sonho que se tornou realidade.",
-    "A vida com você é mais doce.",
-    "Você é a minha paz e a minha tempestade.",
-    "Meu amor, você é o meu paraíso.",
-    "Te amo, minha vida.",
-    "Você é a minha força.",
-    "Você é a minha inspiração.",
-    "Eu te amo em todos os momentos, bons e ruins.",
-    "Você é o meu tudo.",
-    "A minha felicidade tem o seu nome.",
-    "Você é a pessoa que eu quero amar para o resto da vida.",
-    "O nosso amor é como o sol, brilhando e aquecendo a cada dia.",
-    "O seu olhar me desarma e me encanta.",
-    "Amo a forma como você transforma meus dias.",
-    "Você é o capítulo mais bonito da minha história.",
-    "Obrigado por ser a minha parceira na vida.",
-    "Você é o meu desejo realizado, a minha prece atendida.",
-    "Meus pensamentos estão sempre em você.",
-    "Meu amor por você é a minha única certeza.",
-    "Você é a peça que faltava no meu quebra-cabeça.",
-    "Seu amor me faz sentir a pessoa mais feliz do universo.",
-    "Nossa conexão é algo que transcende o tempo e o espaço.",
-    "Você é a beleza em forma de pessoa.",
-    "Seu amor me dá coragem e força para enfrentar qualquer desafio.",
-    "Eu te amaria em qualquer vida e em qualquer forma.",
-    "O seu sorriso é o meu céu estrelado.",
-    "Você é a minha canção favorita em loop infinito.",
-    "O nosso 'para sempre' começou no dia em que te conheci.",
-    "Viver sem você não é uma opção para mim.",
-    "Você é a personificação da perfeição aos meus olhos.",
-    "A sua risada é o meu som preferido no mundo.",
-    "Seu abraço tem o poder de curar qualquer dor.",
-    "Meu coração só tem olhos para você.",
-    "Você é o meu refúgio e a minha maior aventura.",
-    "Você é a única pessoa com quem eu quero envelhecer.",
-    "Meu amor por você é um oceano sem fim.",
-    "Seu jeito meigo e doce me conquista todos os dias.",
-    "Você é a minha razão e a minha emoção.",
-    "Amo cada segundo que passo ao seu lado.",
-    "Você é a minha maior bênção.",
-    "Seu toque é o meu milagre diário.",
-    "Você me faz querer ser melhor, só para merecer o seu amor.",
-    "Meu amor por você é a força que me move.",
-    "Seu beijo tem o gosto do paraíso.",
-    "Eu me perco no seu olhar e me encontro no seu abraço.",
-    "Você é a poesia que a minha alma estava esperando.",
-    "Meu amor, você é a minha luz guia.",
-    "Eu te amo em todas as suas versões.",
-    "Nós dois juntos somos uma sinfonia de amor.",
-    "Você é o meu lar, não importa onde estejamos.",
-    "Meu amor, você é a minha maior inspiração.",
-    "Com você, não tenho medo de nada.",
-    "Você é a minha paz interior.",
-    "O seu amor é o meu maior tesouro.",
-    "Você me faz acreditar em contos de fadas.",
-    "Meu amor, você é a minha alma, meu coração.",
-    "Você é a minha história de amor favorita.",
-    "Eu amo a forma como você é única.",
-    "Você é o meu pedaço de céu na Terra.",
-    "Eu te amo mais do que amo a mim mesmo.",
-    "Meu amor, você é a minha vida inteira.",
-    "Você é o sonho que eu nunca soube que tinha.",
-    "Você é a minha felicidade em forma de pessoa.",
-    "Eu te amo por quem você é e por quem eu me tornei com você.",
-    "Você é a minha eterna paixão.",
-    "Seu amor me faz sentir nas nuvens.",
-    "Amo a maneira como você me olha, como se eu fosse a única pessoa no mundo.",
-    "Você é a minha resposta para todas as minhas perguntas.",
-    "Meu amor, meu coração te pertence.",
-    "Você é a razão pela qual eu acredito no amor.",
-    "Eu te amo além da razão.",
-    "Você é a coisa mais linda que já me aconteceu.",
-    "Meu amor por você é mais profundo que o oceano.",
-    "Amo a forma como você me completa.",
-    "Seu amor me dá a força para seguir em frente.",
-    "Você é o meu amor e a minha vida.",
-    "Eu te amo incondicionalmente.",
-    "Você é o meu mundo.",
-    "Meu amor por você é o meu universo.",
-    "Você é a minha luz no escuro.",
-    "Eu te amo mais do que as estrelas no céu.",
-    "Você é a minha vida e a minha alma.",
-    "Obrigado por me amar.",
-    "Meu amor por você é o meu maior segredo.",
-    "Você é a única que me faz sentir assim.",
-    "Eu te amo e te amarei para sempre.",
-    "Você é a minha vida.",
-    "Você é o meu milagre.",
-    "Eu te amo e te amo de novo.",
-    "Você é a minha razão para acordar.",
-    "Você é a minha inspiração para a vida.",
-    "Eu te amo mais que tudo.",
-    "Você é a minha felicidade.",
-    "Meu amor por você é a minha eternidade.",
-    "Você é a minha única certeza.",
-    "Eu te amo por tudo que você é.",
-    "Você é a minha pessoa favorita.",
-    "Você é a minha vida.",
-    "Eu te amo, meu amor.",
-    "Você é a minha paz.",
-    "Você é o meu sol.",
-    "Meu amor, você é a minha vida.",
-    "Você é o meu tudo.",
-    "Você é o amor da minha vida.",
-    "Eu te amo mais que as palavras podem expressar.",
-    "Você é a minha alma gêmea.",
-    "Você é o meu amor.",
-    "Meu amor, você é a minha vida.",
-    "Você é a minha razão para sorrir.",
-    "Eu te amo mais que o infinito.",
-    "O seu abraço é a minha melhor armadura contra o mundo.",
-    "Amo a forma como você me vê e me aceita.",
-    "Você é a minha canção de ninar favorita.",
-    "Meu coração dispara toda vez que você está por perto.",
-    "Você é a minha dose diária de felicidade.",
-    "Obrigado por existir na minha vida.",
-    "Você é o meu final feliz.",
-    "O tempo para quando estou com você.",
-    "Você me faz acreditar que o amor é real.",
-    "Nossa história é a minha favorita de todas.",
-    "Seu beijo é a minha melhor lembrança.",
-    "Você é o meu lar, meu refúgio e meu paraíso.",
-    "Amo a forma como você me faz sentir.",
-    "Você é a pessoa que eu quero para a minha eternidade.",
-    "Te amar é o meu maior privilégio.",
-    "Meu coração só tem lugar para você.",
-    "Com você, cada dia é uma nova aventura.",
-    "Você é a única que consegue me acalmar.",
-    "Obrigado por me dar o seu coração.",
-    "Você é a minha razão para acordar sorrindo.",
-    "Meu amor por você é maior que qualquer palavra.",
-    "Você é a minha maior conquista.",
-    "Não há nada que eu não faria por você.",
-    "Você é a minha motivação e a minha paz.",
-    "Seu amor é o meu maior tesouro.",
-    "Você é a minha pessoa favorita em todo o mundo.",
-    "Te amo mais do que as estrelas no céu.",
-    "Você é a minha vida.",
-    "Você me faz querer ser melhor.",
-    "A sua presença me faz feliz.",
-    "Você é o meu amor verdadeiro.",
-    "Nós dois somos uma dupla perfeita.",
-    "Você é o amor da minha vida.",
-    "Meu amor por você é um jardim que só cresce.",
-    "Você é a minha vida inteira.",
-    "Seu amor me fortalece.",
-    "Você é a minha felicidade.",
-    "Eu te amo mais que o infinito.",
-    "Você é a minha alma.",
-    "O seu abraço é o meu abrigo.",
-    "Você é o amor da minha vida.",
-    "Eu te amo mais que tudo.",
-    "Você é a minha paixão.",
-    "Você é a minha vida.",
-    "Meu amor, você é o meu universo.",
-    "Você é a minha única.",
-    "Eu te amo mais que as palavras podem dizer.",
-    "Você é a minha inspiração.",
-    "Você é a minha vida.",
-    "Meu amor por você é a minha eternidade.",
-    "Você é o meu tudo.",
-    "Você é o amor da minha vida.",
-    "Eu te amo mais que as palavras podem expressar.",
-    "Você é a minha alma gêmea.",
-    "Você é o meu amor.",
-    "Meu amor, você é a minha vida.",
-    "Você é a minha razão para sorrir.",
-    "Eu te amo mais que o infinito.",
-    "Você é a minha princesa.",
-    "Amo a forma como você cuida de mim.",
-    "Você é a minha rainha.",
-    "Você é a minha felicidade.",
-    "Eu te amo mais que o universo.",
-    "Você é a minha vida.",
-    "Amo a forma como você me faz sentir.",
-    "Você é a minha paz.",
-    "Você é o meu amor.",
-    "Eu te amo mais que o infinito.",
-    "Meu coração te escolheu e jamais vou me arrepender.",
-    "Nossa conexão é mais forte do que qualquer outra.",
-    "Você me faz acreditar na magia do amor.",
-    "Sua presença é a minha maior alegria.",
-    "Meu futuro é você, meu presente é você e o meu passado me levou a você.",
-    "A vida é uma jornada, e eu escolhi você como minha parceira de viagem.",
-    "Amo a forma como você me faz sentir seguro.",
-    "Você é a minha melhor amiga, minha confidente, meu amor.",
-    "Você tem o dom de transformar um dia ruim em um dia perfeito.",
-    "Meu amor por você é um universo de sentimentos.",
-    "Você é a melhor parte da minha rotina.",
-    "Obrigado por me amar em meus piores momentos.",
-    "Você é o meu porto seguro, meu refúgio da tempestade.",
-    "Cada 'eu te amo' que digo a você é mais verdadeiro do que o anterior.",
-    "Você é a resposta de todas as minhas preces.",
-    "Meu amor, você é a minha alma gêmea.",
-    "Você é a razão do meu 'eu te amo' diário.",
-    "O seu abraço me traz paz.",
-    "Você é a mulher da minha vida.",
-    "Meu amor por você é a minha maior força.",
-    "Amo a forma como você me faz sentir.",
-    "Você é o meu paraíso.",
-    "Eu te amo mais do que as estrelas do céu.",
-    "Você é a minha inspiração.",
-    "Você é o meu tudo.",
-    "Você me faz querer ser um homem melhor.",
-    "Você é a minha rainha.",
-    "Amo a forma como você me faz sentir.",
-    "Você é a minha paz.",
-    "Você é o meu amor.",
-    "O seu sorriso é o melhor motivo para o meu dia.",
-    "Nossa história de amor é a minha preferida.",
-    "Você é a minha razão para ser feliz.",
-    "Meu coração só te pertence.",
-    "Não consigo imaginar minha vida sem você.",
-    "O seu abraço me traz paz e segurança.",
-    "Você é a minha melhor amiga e meu grande amor.",
-    "Te amo em cada batida do meu coração.",
-    "Você me completa de uma forma que ninguém mais poderia.",
-    "Nosso amor é mais forte que o tempo e a distância.",
-    "Cada momento com você é um tesouro.",
-    "Você é a única pessoa que eu quero para sempre na minha vida.",
-    "Seu amor me fortalece e me inspira.",
-    "Você é a minha alegria diária.",
-    "Obrigado por me amar do jeito que sou.",
-    "Você é a minha paz e o meu porto seguro.",
-    "Meu coração te escolheu e eu o amo por isso.",
-    "Você é a mulher dos meus sonhos.",
-    "Meu amor por você é a minha maior aventura.",
-    "Eu te amo mais do que as palavras podem dizer.",
-    "Você é a minha vida inteira.",
-    "Meu amor, você é a minha razão para acordar.",
-    "Você é a minha princesa.",
-    "Você é a minha inspiração.",
-    "Você é a minha felicidade.",
-    "Eu te amo mais que o universo.",
-    "Você é a minha vida.",
-    "Amo a forma como você me faz feliz.",
-    "Você é a minha felicidade.",
-    "Eu te amo mais que o mundo.",
-    "Você é a minha vida.",
-    "Amo a forma como você me faz sentir.",
-    "Você é a minha paz.",
-    "Você é o meu amor.",
-    "Eu te amo mais que tudo.",
-    "Você é a minha vida.",
-    "Amo a forma como você me faz sorrir.",
-    "Você é a minha felicidade.",
-    "Eu te amo mais que o céu.",
-    "Você é a minha vida.",
-    "Você é a minha paz.",
-    "Você é o meu amor.",
-    "Eu te amo mais que o infinito."
+
+    "Você é a razão do meu sorriso todos os dias.",
+
+    "Com você, a vida é uma aventura maravilhosa.",
+
+    "O seu abraço é o meu lugar favorito no mundo.",
+
+    "Não importa o tempo ou a distância, meu amor por você só cresce.",
+
+    "Você é o meu tudo, minha melhor amiga e meu grande amor.",
+
+    "Cada dia ao seu lado é um presente que a vida me deu.",
+
+    "Onde quer que eu esteja, meu coração sempre te encontra.",
+
+    "Você me inspira a ser a melhor versão de mim mesmo.",
+
+    "Você me faz sentir completo.",
+
+    "Amo cada detalhe seu, cada risada, cada olhar.",
+
+    "A vida é mais colorida com você.",
+
+    "Com você, o amor é uma melodia perfeita.",
+
+    "Você é o meu tudo, hoje e sempre.",
+
+    "O seu sorriso é o sol do meu dia.",
+
+    "Nosso amor é a prova de que sonhos se realizam.",
+
+    "Sua presença é o maior presente que a vida me deu.",
+
+    "Sempre que fecho os olhos, vejo o seu sorriso.",
+
+    "Meu coração bate no seu ritmo.",
+
+    "Amo-te além do que as palavras podem dizer.",
+
+    "Nosso amor é eterno como o céu e o mar.",
+
+    "Nenhuma distância pode diminuir o meu amor por você.",
+
+    "Você é a estrela mais linda do meu céu.",
+
+    "Meu coração é seu, para sempre e sempre.",
+
+    "Você me ensinou o que é o amor de verdade.",
+
+    "Quero passar o resto da minha vida ao seu lado.",
+
+    "Estar com você é a minha maior felicidade.",
+
+    "Você é a minha paz em meio ao caos.",
+
+    "Meu coração é inteiramente seu.",
+
+    "Me apaixonei por você mais de uma vez, e em cada uma delas me apaixonei mais e mais.",
+
+    "Você é a pessoa que eu sonhei a vida toda.",
+
+    "Meu mundo ficou mais bonito quando você chegou.",
+
+    "Te amo em cada batida do meu coração.",
+
+    "Você é o meu porto seguro.",
+
+    "Meu amor por você é incondicional.",
+
+    "Sua voz é a minha música preferida.",
+
+    "A sua mão se encaixa perfeitamente na minha.",
+
+    "O seu cheiro me acalma.",
+
+    "Te escolheria de novo e de novo, mil vezes.",
+
+    "Você é a luz no fim do túnel.",
+
+    "Meu amor, você é a minha maior sorte.",
+
+    "A cada dia que passa, eu me apaixono mais por você.",
+
+    "Você é a parte que faltava em mim.",
+
+    "Prometo te amar e te proteger para sempre.",
+
+    "O amor é lindo, mas o nosso é perfeito.",
+
+    "Você é a minha razão de viver.",
+
+    "Com você, até os momentos mais simples se tornam especiais.",
+
+    "Eu te amo mais do que as palavras podem expressar.",
+
+    "Você é o meu primeiro e último pensamento.",
+
+    "O meu maior sonho é construir uma vida inteira com você.",
+
+    "Meu coração é inteiramente seu.",
+
+    "Você é a minha alma gêmea.",
+
+    "Te amar é fácil, é a coisa mais natural do mundo.",
+
+    "Você é a única pessoa que eu quero ao meu lado.",
+
+    "Prometo te amar para todo o sempre.",
+
+    "Meu amor, meu coração é seu.",
+
+    "Você é a minha melhor decisão.",
+
+    "O seu beijo é a minha maior recompensa.",
+
+    "Você é a mais bela paisagem que meus olhos já viram.",
+
+    "Te amo por quem você é e por quem eu sou com você.",
+
+    "Estar com você é como estar em casa.",
+
+    "Você é o meu paraíso particular.",
+
+    "Você me faz querer ser uma pessoa melhor.",
+
+    "Meu amor, você é a minha vida.",
+
+    "Você é a única pessoa que eu quero amar.",
+
+    "Eu te amo, e isso é a única certeza na minha vida.",
+
+    "Você é o meu 'felizes para sempre'.",
+
+    "Meus dias são melhores porque você existe.",
+
+    "O universo conspira a nosso favor.",
+
+    "Você é o meu presente, meu passado e meu futuro.",
+
+    "A sua felicidade é a minha prioridade.",
+
+    "Você é o meu anjo.",
+
+    "Eu te amo mais do que as palavras podem dizer.",
+
+    "A sua beleza é um reflexo do seu lindo coração.",
+
+    "Você é a melodia que o meu coração canta.",
+
+    "Você me faz sentir o homem mais sortudo do mundo.",
+
+    "Te amo hoje, amanhã e para todo o sempre.",
+
+    "Meu amor por você é infinito.",
+
+    "Sua presença é o meu maior conforto.",
+
+    "Você é a minha heroína.",
+
+    "Meu amor, você é a minha melhor parte.",
+
+    "Com você, eu sou invencível.",
+
+    "Você é a minha razão para sorrir.",
+
+    "Eu te amo e não há nada que possa mudar isso.",
+
+    "O meu coração é o seu lar.",
+
+    "Você é a mais linda obra de arte.",
+
+    "Meu amor, você me completa.",
+
+    "Você é a melhor coisa que me aconteceu.",
+
+    "O seu abraço me salva.",
+
+    "Meu amor, você é o meu sonho que se tornou realidade.",
+
+    "A vida com você é mais doce.",
+
+    "Você é a minha paz e a minha tempestade.",
+
+    "Meu amor, você é o meu paraíso.",
+
+    "Te amo, minha vida.",
+
+    "Você é a minha força.",
+
+    "Você é a minha inspiração.",
+
+    "Eu te amo em todos os momentos, bons e ruins.",
+
+    "Você é o meu tudo.",
+
+    "A minha felicidade tem o seu nome.",
+
+    "Você é a pessoa que eu quero amar para o resto da vida.",
+
+    "O nosso amor é como o sol, brilhando e aquecendo a cada dia.",
+
+    "O seu olhar me desarma e me encanta.",
+
+    "Amo a forma como você transforma meus dias.",
+
+    "Você é o capítulo mais bonito da minha história.",
+
+    "Obrigado por ser a minha parceira na vida.",
+
+    "Você é o meu desejo realizado, a minha prece atendida.",
+
+    "Meus pensamentos estão sempre em você.",
+
+    "Meu amor por você é a minha única certeza.",
+
+    "Você é a peça que faltava no meu quebra-cabeça.",
+
+    "Seu amor me faz sentir a pessoa mais feliz do universo.",
+
+    "Nossa conexão é algo que transcende o tempo e o espaço.",
+
+    "Você é a beleza em forma de pessoa.",
+
+    "Seu amor me dá coragem e força para enfrentar qualquer desafio.",
+
+    "Eu te amaria em qualquer vida e em qualquer forma.",
+
+    "O seu sorriso é o meu céu estrelado.",
+
+    "Você é a minha canção favorita em loop infinito.",
+
+    "O nosso 'para sempre' começou no dia em que te conheci.",
+
+    "Viver sem você não é uma opção para mim.",
+
+    "Você é a personificação da perfeição aos meus olhos.",
+
+    "A sua risada é o meu som preferido no mundo.",
+
+    "Seu abraço tem o poder de curar qualquer dor.",
+
+    "Meu coração só tem olhos para você.",
+
+    "Você é o meu refúgio e a minha maior aventura.",
+
+    "Você é a única pessoa com quem eu quero envelhecer.",
+
+    "Meu amor por você é um oceano sem fim.",
+
+    "Seu jeito meigo e doce me conquista todos os dias.",
+
+    "Você é a minha razão e a minha emoção.",
+
+    "Amo cada segundo que passo ao seu lado.",
+
+    "Você é a minha maior bênção.",
+
+    "Seu toque é o meu milagre diário.",
+
+    "Você me faz querer ser melhor, só para merecer o seu amor.",
+
+    "Meu amor por você é a força que me move.",
+
+    "Seu beijo tem o gosto do paraíso.",
+
+    "Eu me perco no seu olhar e me encontro no seu abraço.",
+
+    "Você é a poesia que a minha alma estava esperando.",
+
+    "Meu amor, você é a minha luz guia.",
+
+    "Eu te amo em todas as suas versões.",
+
+    "Nós dois juntos somos uma sinfonia de amor.",
+
+    "Você é o meu lar, não importa onde estejamos.",
+
+    "Meu amor, você é a minha maior inspiração.",
+
+    "Com você, não tenho medo de nada.",
+
+    "Você é a minha paz interior.",
+
+    "O seu amor é o meu maior tesouro.",
+
+    "Você me faz acreditar em contos de fadas.",
+
+    "Meu amor, você é a minha alma, meu coração.",
+
+    "Você é a minha história de amor favorita.",
+
+    "Eu amo a forma como você é única.",
+
+    "Você é o meu pedaço de céu na Terra.",
+
+    "Eu te amo mais do que amo a mim mesmo.",
+
+    "Meu amor, você é a minha vida inteira.",
+
+    "Você é o sonho que eu nunca soube que tinha.",
+
+    "Você é a minha felicidade em forma de pessoa.",
+
+    "Eu te amo por quem você é e por quem eu me tornei com você.",
+
+    "Você é a minha eterna paixão.",
+
+    "Seu amor me faz sentir nas nuvens.",
+
+    "Amo a maneira como você me olha, como se eu fosse a única pessoa no mundo.",
+
+    "Você é a minha resposta para todas as minhas perguntas.",
+
+    "Meu amor, meu coração te pertence.",
+
+    "Você é a razão pela qual eu acredito no amor.",
+
+    "Eu te amo além da razão.",
+
+    "Você é a coisa mais linda que já me aconteceu.",
+
+    "Meu amor por você é mais profundo que o oceano.",
+
+    "Amo a forma como você me completa.",
+
+    "Seu amor me dá a força para seguir em frente.",
+
+    "Você é o meu amor e a minha vida.",
+
+    "Eu te amo incondicionalmente.",
+
+    "Você é o meu mundo.",
+
+    "Meu amor por você é o meu universo.",
+
+    "Você é a minha luz no escuro.",
+
+    "Eu te amo mais do que as estrelas no céu.",
+
+    "Você é a minha vida e a minha alma.",
+
+    "Obrigado por me amar.",
+
+    "Meu amor por você é o meu maior segredo.",
+
+    "Você é a única que me faz sentir assim.",
+
+    "Eu te amo e te amarei para sempre.",
+
+    "Você é a minha vida.",
+
+    "Você é o meu milagre.",
+
+    "Eu te amo e te amo de novo.",
+
+    "Você é a minha razão para acordar.",
+
+    "Você é a minha inspiração para a vida.",
+
+    "Eu te amo mais que tudo.",
+
+    "Você é a minha felicidade.",
+
+    "Meu amor por você é a minha eternidade.",
+
+    "Você é a minha única certeza.",
+
+    "Eu te amo por tudo que você é.",
+
+    "Você é a minha pessoa favorita.",
+
+    "Você é a minha vida.",
+
+    "Eu te amo, meu amor.",
+
+    "Você é a minha paz.",
+
+    "Você é o meu sol.",
+
+    "Meu amor, você é a minha vida.",
+
+    "Você é o meu tudo.",
+
+    "Você é o amor da minha vida.",
+
+    "Eu te amo mais que as palavras podem expressar.",
+
+    "Você é a minha alma gêmea.",
+
+    "Você é o meu amor.",
+
+    "Meu amor, você é a minha vida.",
+
+    "Você é a minha razão para sorrir.",
+
+    "Eu te amo mais que o infinito.",
+
+    "O seu abraço é a minha melhor armadura contra o mundo.",
+
+    "Amo a forma como você me vê e me aceita.",
+
+    "Você é a minha canção de ninar favorita.",
+
+    "Meu coração dispara toda vez que você está por perto.",
+
+    "Você é a minha dose diária de felicidade.",
+
+    "Obrigado por existir na minha vida.",
+
+    "Você é o meu final feliz.",
+
+    "O tempo para quando estou com você.",
+
+    "Você me faz acreditar que o amor é real.",
+
+    "Nossa história é a minha favorita de todas.",
+
+    "Seu beijo é a minha melhor lembrança.",
+
+    "Você é o meu lar, meu refúgio e meu paraíso.",
+
+    "Amo a forma como você me faz sentir.",
+
+    "Você é a pessoa que eu quero para a minha eternidade.",
+
+    "Te amar é o meu maior privilégio.",
+
+    "Meu coração só tem lugar para você.",
+
+    "Com você, cada dia é uma nova aventura.",
+
+    "Você é a única que consegue me acalmar.",
+
+    "Obrigado por me dar o seu coração.",
+
+    "Você é a minha razão para acordar sorrindo.",
+
+    "Meu amor por você é maior que qualquer palavra.",
+
+    "Você é a minha maior conquista.",
+
+    "Não há nada que eu não faria por você.",
+
+    "Você é a minha motivação e a minha paz.",
+
+    "Seu amor é o meu maior tesouro.",
+
+    "Você é a minha pessoa favorita em todo o mundo.",
+
+    "Te amo mais do que as estrelas no céu.",
+
+    "Você é a minha vida.",
+
+    "Você me faz querer ser melhor.",
+
+    "A sua presença me faz feliz.",
+
+    "Você é o meu amor verdadeiro.",
+
+    "Nós dois somos uma dupla perfeita.",
+
+    "Você é o amor da minha vida.",
+
+    "Meu amor por você é um jardim que só cresce.",
+
+    "Você é a minha vida inteira.",
+
+    "Seu amor me fortalece.",
+
+    "Você é a minha felicidade.",
+
+    "Eu te amo mais que o infinito.",
+
+    "Você é a minha alma.",
+
+    "O seu abraço é o meu abrigo.",
+
+    "Você é o amor da minha vida.",
+
+    "Eu te amo mais que tudo.",
+
+    "Você é a minha paixão.",
+
+    "Você é a minha vida.",
+
+    "Meu amor, você é o meu universo.",
+
+    "Você é a minha única.",
+
+    "Eu te amo mais que as palavras podem dizer.",
+
+    "Você é a minha inspiração.",
+
+    "Você é a minha vida.",
+
+    "Meu amor por você é a minha eternidade.",
+
+    "Você é o meu tudo.",
+
+    "Você é o amor da minha vida.",
+
+    "Eu te amo mais que as palavras podem expressar.",
+
+    "Você é a minha alma gêmea.",
+
+    "Você é o meu amor.",
+
+    "Meu amor, você é a minha vida.",
+
+    "Você é a minha razão para sorrir.",
+
+    "Eu te amo mais que o infinito.",
+
+    "Você é a minha princesa.",
+
+    "Amo a forma como você cuida de mim.",
+
+    "Você é a minha rainha.",
+
+    "Você é a minha felicidade.",
+
+    "Eu te amo mais que o universo.",
+
+    "Você é a minha vida.",
+
+    "Amo a forma como você me faz sentir.",
+
+    "Você é a minha paz.",
+
+    "Você é o meu amor.",
+
+    "Eu te amo mais que o infinito.",
+
+    "Meu coração te escolheu e jamais vou me arrepender.",
+
+    "Nossa conexão é mais forte do que qualquer outra.",
+
+    "Você me faz acreditar na magia do amor.",
+
+    "Sua presença é a minha maior alegria.",
+
+    "Meu futuro é você, meu presente é você e o meu passado me levou a você.",
+
+    "A vida é uma jornada, e eu escolhi você como minha parceira de viagem.",
+
+    "Amo a forma como você me faz sentir seguro.",
+
+    "Você é a minha melhor amiga, minha confidente, meu amor.",
+
+    "Você tem o dom de transformar um dia ruim em um dia perfeito.",
+
+    "Meu amor por você é um universo de sentimentos.",
+
+    "Você é a melhor parte da minha rotina.",
+
+    "Obrigado por me amar em meus piores momentos.",
+
+    "Você é o meu porto seguro, meu refúgio da tempestade.",
+
+    "Cada 'eu te amo' que digo a você é mais verdadeiro do que o anterior.",
+
+    "Você é a resposta de todas as minhas preces.",
+
+    "Meu amor, você é a minha alma gêmea.",
+
+    "Você é a razão do meu 'eu te amo' diário.",
+
+    "O seu abraço me traz paz.",
+
+    "Você é a mulher da minha vida.",
+
+    "Meu amor por você é a minha maior força.",
+
+    "Amo a forma como você me faz sentir.",
+
+    "Você é o meu paraíso.",
+
+    "Eu te amo mais do que as estrelas do céu.",
+
+    "Você é a minha inspiração.",
+
+    "Você é o meu tudo.",
+
+    "Você me faz querer ser um homem melhor.",
+
+    "Você é a minha rainha.",
+
+    "Amo a forma como você me faz sentir.",
+
+    "Você é a minha paz.",
+
+    "Você é o meu amor.",
+
+    "O seu sorriso é o melhor motivo para o meu dia.",
+
+    "Nossa história de amor é a minha preferida.",
+
+    "Você é a minha razão para ser feliz.",
+
+    "Meu coração só te pertence.",
+
+    "Não consigo imaginar minha vida sem você.",
+
+    "O seu abraço me traz paz e segurança.",
+
+    "Você é a minha melhor amiga e meu grande amor.",
+
+    "Te amo em cada batida do meu coração.",
+
+    "Você me completa de uma forma que ninguém mais poderia.",
+
+    "Nosso amor é mais forte que o tempo e a distância.",
+
+    "Cada momento com você é um tesouro.",
+
+    "Você é a única pessoa que eu quero para sempre na minha vida.",
+
+    "Seu amor me fortalece e me inspira.",
+
+    "Você é a minha alegria diária.",
+
+    "Obrigado por me amar do jeito que sou.",
+
+    "Você é a minha paz e o meu porto seguro.",
+
+    "Meu coração te escolheu e eu o amo por isso.",
+
+    "Você é a mulher dos meus sonhos.",
+
+    "Meu amor por você é a minha maior aventura.",
+
+    "Eu te amo mais do que as palavras podem dizer.",
+
+    "Você é a minha vida inteira.",
+
+    "Meu amor, você é a minha razão para acordar.",
+
+    "Você é a minha princesa.",
+
+    "Você é a minha inspiração.",
+
+    "Você é a minha felicidade.",
+
+    "Eu te amo mais que o universo.",
+
+    "Você é a minha vida.",
+
+    "Amo a forma como você me faz feliz.",
+
+    "Você é a minha felicidade.",
+
+    "Eu te amo mais que o mundo.",
+
+    "Você é a minha vida.",
+
+    "Amo a forma como você me faz sentir.",
+
+    "Você é a minha paz.",
+
+    "Você é o meu amor.",
+
+    "Eu te amo mais que tudo.",
+
+    "Você é a minha vida.",
+
+    "Amo a forma como você me faz sorrir.",
+
+    "Você é a minha felicidade.",
+
+    "Eu te amo mais que o céu.",
+
+    "Você é a minha vida.",
+
+    "Você é a minha paz.",
+
+    "Você é o meu amor.",
+
+    "Eu te amo mais que o infinito."
 ];
 
 // Função para atualizar o contador de tempo
@@ -396,9 +735,11 @@ function updateCounter() {
 // Função para exibir uma frase diferente a cada dia
 function displayDailyPhrase() {
     const now = new Date();
-    const startOfEra = new Date(2000, 0, 1); // Uma data fixa para garantir o mesmo cálculo em qualquer ano
-    const differenceInDays = Math.floor((now.getTime() - startOfEra.getTime()) / (1000 * 60 * 60 * 24));
+    // Usa a data de início do relacionamento como base para o cálculo
+    const differenceInDays = Math.floor((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
     
+    // Calcula o índice da frase com base no número de dias de relacionamento
+    // Isso garante que a frase não se repita até que todas as 500 frases tenham sido usadas
     const phraseIndex = differenceInDays % lovePhrases.length;
     phraseDisplay.textContent = lovePhrases[phraseIndex];
 }
